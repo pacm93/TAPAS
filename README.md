@@ -112,7 +112,7 @@ To get started with TAPAS you will need the following (additional) items.
 
 + We highly recommend placing TAPAS in __a case__. This will keep your TAPAS board safe.
 The 3D model for our very own case can be found and downloaded here:
-<https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/TAPAShousing.zip>. 
+<https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/TAPAS_housing.zip>.
 If you don't own a 3D printer, many local 3D printing services are available on-line.
 Print with temperature-stable materials like ABS (not PLA).				
 + __DC power supply__ with a minimum of 12V and >3A continuous current output.
@@ -267,11 +267,11 @@ git clone https://github.com/SDI-SoftwareDefinedInverter/TAPAS.git
 
 We included a copy of TI motorware in the cloned repository (_`motorware.zip`_). Alternatively you can download motorware from Motorware or here <https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/motorware.zip>.
 
-As the TAPAS board definition is not part of the stock motorware package we have to make some modifications to it. All the necessary changes are contained in the patch-file _`SDITAPASmotorwarePatch.patch`_. Now copy _`SDITAPASmotorwarePatch.patch`_ to the motorware installation folder (usually _`C:\ti\`_) and start git in bash mode (also in the motorware installation folder). Then execute the following commands:
+As the TAPAS board definition is not part of the stock motorware package we have to make some modifications to it. All the necessary changes are contained in the patch-file _`TAPAS_patch_motorware.patch`_. Now copy _`TAPAS_patch_motorware.patch`_ to the motorware installation folder (usually _`C:\ti\`_) and start git in bash mode (also in the motorware installation folder). Then execute the following commands:
 
 ```
-dos2unix SDITAPASmotorwarePatch.patch
-patch -p0 -i SDITAPASmotorwarePatch.patch
+dos2unix TAPAS_patch_motorware.patch
+patch -p0 -i TAPAS_patch_motorware.patch
 ```
 
 This completes the installation of motorware und you can start playing with the motorware-labs
@@ -304,7 +304,7 @@ To be able to run our TAPAS demo-webapp you also require the InstaSPIN-UNIVERSAL
 You have now completed the installation of the TAPAS development environment. We have also created a TAPAS-webapp to test all external I/O hardware. You can download it from:	
 
 ```
-https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/TAPASwebapp.zip
+https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/TAPAS_webapp.zip
 ```
 Unzip the file place it in:
 
@@ -344,11 +344,11 @@ board. To prevent this effect, limit the rate of change in motor velocity, use a
 The following documents can be helpful in developing with TAPAS:
 
 + TAPAS Pinout: 
-<https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/TAPAS-Pinout.pdf>	
+<https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/docs/TAPAS-Pinout.pdf>
 + TAPAS Schematics: 
-<https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/TAPAS-Schematic.pdf>
+<https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/docs/TAPAS-Schematic.pdf>
 + This 13document(quick start guide):
-<https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/TAPAS_quickStartGuide.pdf>
+<https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/docs/TAPAS_quickStartGuide.pdf>
 + InstaSPIN-FOC and InstaSPIN-MOTION user guide : 
 <http://www.ti.com/lit/ug/spruhj1g/spruhj1g.pdf>
 + Instaspin projects and labs user's guide, see motorware _`<drive>:\ti\motorware\
