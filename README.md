@@ -114,7 +114,7 @@ To get started with TAPAS you will need the following (additional) items.
 The 3D model for our very own case can be found and downloaded here:
 <https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/TAPAS_housing.zip>.
 If you don't own a 3D printer, many local 3D printing services are available on-line.
-Print with temperature-stable materials like ABS (not PLA).				
+Print with temperature-stable materials like ABS (not PLA).
 + __DC power supply__ with a minimum of 12V and >3A continuous current output.
 Alternatively, you may use any battery with the correct voltage and an appropriate
 fuse in the supply line	
@@ -267,10 +267,13 @@ git clone https://github.com/SDI-SoftwareDefinedInverter/TAPAS.git
 
 We included a copy of TI motorware in the cloned repository (_`motorware.zip`_). Alternatively you can download motorware from Motorware or here <https://github.com/SDI-SoftwareDefinedInverter/TAPAS/blob/master/motorware.zip>.
 
+The zip contains a windows installer, which can also de used on linux via wine.
+
 As the TAPAS board definition is not part of the stock motorware package we have to make some modifications to it. All the necessary changes are contained in the patch-file _`TAPAS_patch_motorware.patch`_. Now copy _`TAPAS_patch_motorware.patch`_ to the motorware installation folder (usually _`C:\ti\`_) and start git in bash mode (also in the motorware installation folder). Then execute the following commands:
 
 ```
 dos2unix TAPAS_patch_motorware.patch
+find . -type f | xargs dos2unix {} \; #only for linux installation
 patch -p0 -i TAPAS_patch_motorware.patch
 ```
 
